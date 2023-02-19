@@ -5,191 +5,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navigation-Bar</title>
-    <style>
-                 * {
-           margin: 0%;
-           padding: 0%;
-           box-sizing: border-box;
-       }
-
-       body {
-           background-color: rgb(233, 211, 211);
-       }
-
-       .container {
-           height: 22vh;
-           background-color: rgb(105, 5, 199);
-           box-shadow: 0px 0px 17px 4px rgb(0, 0, 0);
-       }
-
-       nav {
-           width: 100%;
-           height: 100%;
-           display: flex;
-           justify-content: space-between;
-       }
-
-       img {
-           width: 120px;
-           clip-path: circle(50%);
-           transform: translateY(6%);
-           margin-left: 20px;
-       }
-
-       img:hover {
-           transition: 2s;
-           cursor: pointer;
-           transform: scale(0.8);
-           transform: translateZ(3);
-       }
-
-       .lists {
-           display: flex;
-           align-items: center;
-           justify-content: space-evenly;
-           width: 40%;
-           background-color: black;
-           /* border-left: 4px solid rgb(9, 198, 255);
-            border-right: 10px solid rgb(9, 198, 255); */
-       }
-
-       ul li {
-           list-style-type: none;
-       }
-
-       a {
-           text-decoration: none;
-           color: white;
-           font-size: 1.6rem;
-       }
-
-       ul li:hover {
-           transform: scale(1.2);
-           transition: transform 1s;
-       }
-
-       ul li a:hover {
-           color: rgb(247, 8, 87);
-       }
-
-       .arrow {
-           margin-right: 18px;
-           height: 11.2vh;
-           width: 60px;
-           /* background-color: red; */
-           /* margin-top: 30px; */
-           transform: translateY(38%);
-           display: none;
-       }
-
-       .line1,
-       .line2,
-       .line3 {
-
-           height: 10%;
-           width: 101%;
-           background-color: aqua;
-           margin-top: 28px;
-           border-radius: 6px;
-
-       }
-
-       /* .line2 {
-            background-color: brown;
-        }
-
-        .line3 {
-            background-color: tomato;
-        } */
-
-       /* @media screen and (max-width:560px) {
-            .lists {
-                width: 70%;
-                display: flex;
-                justify-content: space-between;
-            }
-
-            img {
-                margin-top: 50px;
-            }
-        } */
-
-       @media screen and (max-width:574px) {
-           .lists {
-               /* display: none; */
-               position: fixed;
-               top: 22vh;
-               right: 0;
-               width: 360px;
-               height: 78vh;
-               flex-direction: column;
-               transform: translateX(100%);
-               transition: transform 2.2s;
-           }
-
-           img {
-               margin-top: 16px;
-               width: 180px;
-           }
-
-           .arrow {
-               display: block;
-           }
-       }
-
-       .sarwan {
-           transform: translateX(0%);
-       }
-
-       .toggle1 {
-           transform: rotate(45deg) translate(28px, 30px);
-           transition: transform 1s;
-       }
-
-       .toggle2 {
-           display: none;
-       }
-
-       .toggle3 {
-           transform: rotate(-50deg);
-           transition: transform 1s;
-       }
-    </style>
+    <title>My Website||Responsive</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/617bc55c6b.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class="container">
-        <nav>
-            <div class="img">
-                <img src="./IMG-20220523-WA0002.jpg" alt="">
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="logo.jpg" alt="Website-logo">
             </div>
-            <ul class="lists">
+            <ul class="nav-links">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#">Course</a></li>
                 <li><a href="#">About</a></li>
-                <li><a href="#">Vlog</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
-            <div class="arrow">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
+            <div class="burger">
+                <i class="fa-sharp fa-solid fa-bars"></i>
+                <!-- <i class="fa-sharp fa-solid fa-bars"></i> -->
             </div>
-        </nav>
-    </div>
-    <script>
-        let button = document.querySelector(".arrow"),
-            links = document.querySelector(".lists");
-
-        button.addEventListener("click", () => {
-            links.classList.toggle("sarwan");
-            button.children[0].classList.toggle("toggle1")
-            button.children[1].classList.toggle("toggle2")
-            button.children[2].classList.toggle("toggle3")
-        })
-
-        // console.log(button.children[1]);
-    </script>
+        </div>
+        <div class="text-content">
+            <h1>This Is My First Website</h1>
+            <p>Responsive Using Media-Queries</p>
+            <br>
+            <button class="btn"><span></span> WATCH MORE</button>
+        </div>
+    </header>
+    <!-- javascript -->
+    <script src="javascript.js"></script>
 </body>
 
 </html>
